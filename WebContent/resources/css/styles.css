@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#bodyContents {
+	width: 900px;
+	margin: auto;
+	padding: 1px;
+	position: relative;
+	border-left: 1px solid #DBDBDB;
+	border-right: 1px solid #DBDBDB;
+	background-color: #F3FCFF;
+}
+
+#header h1 {
+	margin-left: 27px;
+	margin-bottom: 0;
+	margin-top: 9px;
+	font-family: "Comic Sans MS";
+	font-size: 40px;
+	font-style: italic;
+}
+
+#langSelection {
+	padding-left: 30px;
+}
+
+#langSelection img {
+	margin-left: 48px;
+}
+
+#navBar {
+	list-style: none;
+	padding-left: 500px;
+	margin: 0;
+}
+
+#navBar li {
+	margin-left: 18px;
+	display: inline;
+}
+
+#navBar a {
+	font-family: "Times New Roman";
+	font-size: 24px;
+	color: #000000;
+	text-decoration: none;
+}
+
+#footer p {
+	text-align: center;es New Roman";
+	font-family: Arial;
+	font-size: 14px;
+}
+
+
+
+
+
+
