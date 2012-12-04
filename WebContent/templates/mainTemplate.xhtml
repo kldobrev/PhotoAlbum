@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<f:view locale="#{language.langLocale}">
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>
+			<ui:insert name="pageTitle">#{descr.defaultTitle}</ui:insert>
+		</title>
+		<h:outputStylesheet name="styles.css" library="css" />
+	</h:head>
+	<h:body>
+		<div id="bodyContents">
+			<div id="header">
+				<h1>PhotoAlbum</h1>
+				<h:form id="langSelection">
+					<h:commandLink actionListener="#{language.setEnglishLocale}" immediate="true">
+						<h:graphicImage name="UK.png" library="images"></h:graphicImage>
+					</h:commandLink>
+					<h:commandLink actionListener="#{language.setBulgarianLocale}" immediate="true">
+						<h:graphicImage name="BG.png" library="images"></h:graphicImage>
+					</h:commandLink>
+				</h:form>
+				<ul id="navBar">
+					<li>
+						<h:link outcome="/views/index.xhtml">#{descr.navHome}</h:link>
+					</li>
+					<li>
+						<h:link outcome="template.xhtml">#{descr.navSearch}</h:link>
+					</li>
+					<li>
+						<h:link outcome="template.xhtml">#{descr.navHelp}</h:link>
+					</li>
+				</ul>
+			</div>
+			<div id="mainContents">
+				<ui:insert name="mainContents"></ui:insert>
+			</div>
+			<div id="footer">
+				<p id="footerText">#{descr.footerText}</p>
+			</div>
+		</div>
+	</h:body>
+</f:view>
+</html>

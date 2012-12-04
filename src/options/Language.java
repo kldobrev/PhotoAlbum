@@ -24,22 +24,14 @@ public class Language implements Serializable {
 		return langLocale;
 	}
 	
-	public void setEnglishOutput() {
-		langLocale = ENGLISH;
-	}
-	
-	public void setBulgarianOutput() {
-		langLocale = BULGARIAN;
-	}
-	
 	public void setEnglishLocale(ActionEvent event) {
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(ENGLISH);
-		setEnglishOutput();
+		langLocale = ENGLISH;
 	}
 	
 	public void setBulgarianLocale(ActionEvent event) {
 		FacesContext.getCurrentInstance().getViewRoot().setLocale(BULGARIAN);
-		setBulgarianOutput();
+		langLocale = BULGARIAN;
 	}
 	
 }

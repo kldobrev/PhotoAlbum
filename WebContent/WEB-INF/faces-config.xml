@@ -11,5 +11,11 @@
     		<var>descr</var>
     	</resource-bundle>
     </application>
-
+	<navigation-rule>
+		<from-view-id>views/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>register</from-outcome>
+			<to-view-id>views/users/register.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 </faces-config>

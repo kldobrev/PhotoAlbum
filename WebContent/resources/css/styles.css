@@ -16,16 +16,25 @@ body {
 }
 
 #header h1 {
-	margin-left: 27px;
+	float:left;
+	margin-left: 36px;
 	margin-bottom: 0;
-	margin-top: 9px;
+	margin-top: 4px;
 	font-family: "Comic Sans MS";
 	font-size: 40px;
 	font-style: italic;
 }
 
+#header {
+	margin: 0;
+	padding: 0;
+	height: 90px;
+}
+
 #langSelection {
-	padding-left: 30px;
+	clear: both;
+	padding-top: 4px;
+	padding-left: 39px;
 }
 
 #langSelection img {
@@ -34,8 +43,11 @@ body {
 
 #navBar {
 	list-style: none;
-	padding-left: 500px;
-	margin: 0;
+	float: right;
+	margin-top: -18px;
+	padding-right: 120px;
+	background-image:url('../images/navbar_back.jpeg');
+	height: 30px;
 }
 
 #navBar li {
@@ -51,13 +63,28 @@ body {
 }
 
 #footer p {
+	clear: both;
 	text-align: center;es New Roman";
 	font-family: Arial;
 	font-size: 14px;
 }
 
+#mainContents {
+	margin: 0;
+	padding: 24px;
+	font-family: Arial;
+}
 
+#regForm {
+	margin-left: 100px;
+	padding: 18px;
+	width: 450px;
+	height: 280px;
+	background-color: #EDFFD3;
+	border: 1px solid #D2FF92;
+}
 
-
-
+#regForm input {
+	margin-bottom: 3px;
+}
 
