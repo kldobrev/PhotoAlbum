@@ -62,6 +62,9 @@ body {
 	text-decoration: none;
 }
 
+#footer {
+}
+
 #footer p {
 	clear: both;
 	text-align: center;es New Roman";
@@ -76,9 +79,11 @@ body {
 }
 
 #regForm {
+	margin-top: 0;
 	margin-left: 100px;
 	padding: 18px;
-	width: 450px;
+	float: left;
+	width: 280px;
 	height: 280px;
 	background-color: #EDFFD3;
 	border: 1px solid #D2FF92;
@@ -86,5 +91,14 @@ body {
 
 #regForm input {
 	margin-bottom: 3px;
+}
+
+#regErrorMessages {
+	margin: 0;
+	padding: 9px;
+	background-color: #FFCECE;
+	border: 1px solid #FF8F8F;
+	width: 360px;
+	float: right;
 }
 

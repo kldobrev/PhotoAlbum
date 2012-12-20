@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets" template="/templates/mainTemplate.xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<ui:define name="pageTitle">#{descr.defaultTitle}</ui:define>
+	<ui:define name="mainContents">
+		<h1>#{descr.regFormGreeting}</h1>
+		<p id="formExplained">#{descr.regFormExpl}</p>
+		<h:form id="regForm">
+			<label for="regUsername">#{descr.regFormUsr}:</label> <br />
+			<h:inputText id="regUsername" value="#{userCreator.username}" required="true" requiredMessage="#{descr.regFormUsrReq}" validator="#{userCreator.validateUsername}" /> <br />
+			<label for="regPassword">#{descr.regFormPass}:</label> <br />
+			<h:inputSecret id="regPassword" value="#{userCreator.password}" required="true" requiredMessage="#{descr.regFormPassReq}" validator="#{userCreator.validatePassword}" /> <br />
+			<label for="regPassRep">#{descr.regFormPassRep}:</label> <br />
+			<h:inputSecret id="regPassRep" required="true" requiredMessage="#{descr.regFormPassRepReq}" value="#{userCreator.repeatedPass}" /> <br />
+			<label for="regPassHint">#{descr.regFormPassHint}:</label> <br />
+			<h:inputText id="regPassHint" value="#{userCreator.passHint}" required="true" requiredMessage="#{descr.regFormPassHintReq}" /> <br />
+			<label for="regEmail">#{descr.regFormEmail}:</label> <br />
+			<h:inputText id="regEmail" value="#{userCreator.email}" required="true" requiredMessage="#{descr.regFormEmailReq}" validator="#{userCreator.validateEmail}" /> <br />
+			<h:commandButton id="regSubmit" action="#{userCreator.register}" value="#{descr.regFormSubmit}" />
+		</h:form>
+		<h:messages id="regErrorMessages" />
+	</ui:define>
+</ui:composition>

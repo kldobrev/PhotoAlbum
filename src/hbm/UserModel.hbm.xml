@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="dataModels.UserModel" table="USERS">
+		<id name="username" type="string" column="USERNAME" />
+		<property name="passwordHash" type="string" column="PASS_HASH" />
+		<property name="passwordSalt" type="string" column="PASS_SALT" />
+		<property name="passwordHint" type="string" column="PASS_HINT" />
+		<property name="email" type="string" column="EMAIL" />
+	</class>
+</hibernate-mapping>

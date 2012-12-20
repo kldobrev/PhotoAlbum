@@ -18,16 +18,18 @@ xmlns:f="http://java.sun.com/jsf/core">
 			<div id="header">
 				<h1>PhotoAlbum</h1>
 				<h:form id="langSelection">
-					<h:commandLink actionListener="#{language.setEnglishLocale}" immediate="true">
+					<h:commandLink actionListener="#{language.setLangLocale}" immediate="true">
+						<f:attribute name="language" value="en" />
 						<h:graphicImage name="UK.png" library="images"></h:graphicImage>
 					</h:commandLink>
-					<h:commandLink actionListener="#{language.setBulgarianLocale}" immediate="true">
+					<h:commandLink actionListener="#{language.setLangLocale}" immediate="true">
+						<f:attribute name="language" value="bg" />
 						<h:graphicImage name="BG.png" library="images"></h:graphicImage>
 					</h:commandLink>
 				</h:form>
 				<ul id="navBar">
 					<li>
-						<h:link outcome="/views/index.xhtml">#{descr.navHome}</h:link>
+						<h:link outcome="index">#{descr.navHome}</h:link>
 					</li>
 					<li>
 						<h:link outcome="template.xhtml">#{descr.navSearch}</h:link>
