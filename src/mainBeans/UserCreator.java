@@ -122,9 +122,9 @@ public class UserCreator {
 			return null;
 		}
 		Configuration configuration = new Configuration();
-	    configuration.configure();
-	    ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();        
-	    SessionFactory factory = configuration.buildSessionFactory(serviceRegistry);
+	    	configuration.configure();
+	    	ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();        
+	   	SessionFactory factory = configuration.buildSessionFactory(serviceRegistry);
 		
 		Session regSession = factory.openSession();
 		regSession.beginTransaction();
